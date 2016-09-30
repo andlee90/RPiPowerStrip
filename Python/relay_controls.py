@@ -10,23 +10,23 @@ GPIO.setwarnings(False)
 
 def controller(SOCKET_NUM, STATE):
 
-    pins = dict([(1, 17), (2, 18), (3, 27), (4, 22), 
-        (5, 23), (6, 24), (7, 25), (8, 21)])
+	pins = dict([(1, 17), (2, 18), (3, 27), (4, 22), 
+        	(5, 23), (6, 24), (7, 25), (8, 21)])
 
 	if STATE == 'OFF' or STATE == 'off':
-    	for s_n, p in pins.items():
-            if s_n == SOCKET_NUM:
-                GPIO.setup(p, GPIO.OUT)
-                GPIO.output(p, 1)
+    		for s_n, p in pins.items():
+            		if s_n == SOCKET_NUM:
+                		GPIO.setup(p, GPIO.OUT)
+                		GPIO.output(p, 1)
 
    	elif STATE == 'ON' or STATE == 'on':
-    	for s_n, p in pins.items():
-            if s_n == SOCKET_NUM:
-                GPIO.setup(p, GPIO.OUT)
-                GPIO.output(p, 0)
+    		for s_n, p in pins.items():
+            		if s_n == SOCKET_NUM:
+                		GPIO.setup(p, GPIO.OUT)
+                		GPIO.output(p, 0)
 
-    else:
-    	print "Invalid Input\n"
+    	else:
+    		print "Invalid Input\n"
 
 TITLE = """
  _____________________
@@ -59,27 +59,27 @@ def main():
 
 	while REPEAT != 0:
 
-    	INPUT = raw_input(">> ")
-    	if INPUT == 'quit' or INPUT == 'q':
-    		REPEAT = 0
-    		break
+    		INPUT = raw_input(">> ")
+    		if INPUT == 'quit' or INPUT == 'q':
+    			REPEAT = 0
+    			break
 
-    	elif INPUT == 'revert' or INPUT == 'r':
-    		REPEAT = 0
-    		GPIO.cleanup()
-    		break
+    		elif INPUT == 'revert' or INPUT == 'r':
+    			REPEAT = 0
+    			GPIO.cleanup()
+    			break
 
-    	elif INPUT == 'menu' or INPUT == 'r':
-    		print MENU
+    		elif INPUT == 'menu' or INPUT == 'r':
+    			print MENU
 
-    	elif INPUT[0].isdigit():
-    		PARAMS = INPUT.split(' ')
-    		SIZE = len(PARAMS)
+    		elif INPUT[0].isdigit():
+    			PARAMS = INPUT.split(' ')
+    			SIZE = len(PARAMS)
 
-    		if SIZE == 2:
-    			SOCKET_NUM = int(PARAMS[0])
-    			STATE = PARAMS[1]
-    			controller(SOCKET_NUM, STATE)
+    			if SIZE == 2:
+    				SOCKET_NUM = int(PARAMS[0])
+    				STATE = PARAMS[1]
+    				controller(SOCKET_NUM, STATE)
 
 			else:
 				print "Invalid Input\n"
