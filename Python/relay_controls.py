@@ -10,17 +10,20 @@ GPIO.setwarnings(False)
 
 def controller(SOCKET_NUM, STATE):
 
-	pins = dict([(1, 17), (2, 18), (3, 27), (4, 22), 
+	PINS = dict([(1, 17), (2, 18), (3, 27), (4, 22), 
         	(5, 23), (6, 24), (7, 25), (8, 21)])
+	
+	if SOCKET_NUM > 8 or SOCKET_NUM < 1:
+		print "Invalid Input\n"
 
-	if STATE == 'OFF' or STATE == 'off':
-    		for s_n, p in pins.items():
+	elif STATE == 'OFF' or STATE == 'off':
+    		for s_n, p in PINS.items():
             		if s_n == SOCKET_NUM:
                 		GPIO.setup(p, GPIO.OUT)
                 		GPIO.output(p, 1)
 
    	elif STATE == 'ON' or STATE == 'on':
-    		for s_n, p in pins.items():
+    		for s_n, p in PINS.items():
             		if s_n == SOCKET_NUM:
                 		GPIO.setup(p, GPIO.OUT)
                 		GPIO.output(p, 0)
