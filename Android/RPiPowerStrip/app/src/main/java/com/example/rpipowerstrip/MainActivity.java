@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity
                 {
                     if (isChecked)
                     {
-                        String command = "cd RelayControl/ && python relay_script.py " + mChannel + " 0";
+                        String command = "cd RelayControl/ && python relay_controller_android.py " + mChannel + " 0";
                         mConnectionManager = new ConnectionManager(mHost, mUser, mPass, command, new ConnectionManager.AsyncResponse(){
 
                             @Override
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
                         mConnectionManager.execute();
                     } else {
 
-                        String command = "cd RelayControl/ && python relay_script.py " + mChannel + " 1";
+                        String command = "cd RelayControl/ && python relay_controller_android.py " + mChannel + " 1";
                         mConnectionManager = new ConnectionManager(mHost, mUser, mPass, command, new ConnectionManager.AsyncResponse(){
 
                             @Override

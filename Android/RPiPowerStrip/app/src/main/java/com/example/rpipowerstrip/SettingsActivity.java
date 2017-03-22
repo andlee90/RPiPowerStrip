@@ -110,7 +110,7 @@ public class SettingsActivity extends AppCompatActivity implements TextView.OnEd
         {
             if (mHost != null && mUser != null && mPass != null)
             {
-                String command = "cd RelayControl/ && python relay_1_on.py";
+                String command = "cd RelayControl/ && python relay_controller_android.py 1 0";
                 mConnectionManager = new ConnectionManager(mHost, mUser, mPass, command, new ConnectionManager.AsyncResponse(){
 
                     @Override
