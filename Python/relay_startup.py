@@ -1,3 +1,9 @@
+"""
+Script to initialize GPIO pins at startup.
+Started by relay_startup.sh
+By Andrew Smith (2016)
+"""
+
 import RPi.GPIO as GPIO
 
 GPIO.setmode(GPIO.BCM)
