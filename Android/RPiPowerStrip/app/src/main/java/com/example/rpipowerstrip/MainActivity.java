@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity
                     else
                     {
                         SharedPreferences.Editor editor = getSharedPreferences(PREFERENCES, 0).edit();
-                        editor.putBoolean(prefName, true);
+                        editor.putBoolean(prefName, false);
                         editor.apply();
 
                         String command = "cd RelayControl/ && python relay_controller_android.py " + mChannel + " 1";
