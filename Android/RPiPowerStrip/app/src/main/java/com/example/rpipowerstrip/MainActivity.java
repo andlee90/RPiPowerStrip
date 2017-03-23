@@ -7,8 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ProgressBar;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
@@ -18,6 +21,9 @@ public class MainActivity extends AppCompatActivity
     private String mHost;
     private String mUser;
     private String mPass;
+
+    private ProgressBar mSpinner;
+    private TextView mStatusMode;
 
     public ConnectionManager mConnectionManager;
 
@@ -53,6 +59,9 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
+                mSpinner.setVisibility(View.VISIBLE);
+                mStatusMode.setVisibility(View.GONE);
+
                 if (mHost != null && mUser != null && mPass != null)
                 {
                     String prefName = "ss" + mChannel;
@@ -71,6 +80,8 @@ public class MainActivity extends AppCompatActivity
                             {
                                 Toast finishToast = Toast.makeText(getApplicationContext(), output, Toast.LENGTH_SHORT);
                                 finishToast.show();
+                                mSpinner.setVisibility(View.GONE);
+                                mStatusMode.setVisibility(View.VISIBLE);
                             }
                         });
                         mConnectionManager.execute();
@@ -89,6 +100,8 @@ public class MainActivity extends AppCompatActivity
                             {
                                 Toast finishToast = Toast.makeText(getApplicationContext(), output, Toast.LENGTH_SHORT);
                                 finishToast.show();
+                                mSpinner.setVisibility(View.GONE);
+                                mStatusMode.setVisibility(View.VISIBLE);
                             }
                         });
                         mConnectionManager.execute();
@@ -96,6 +109,13 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         }
+
+        //TextView status = (TextView)findViewById(R.id.text_status);
+
+        mSpinner = (ProgressBar)findViewById(R.id.progress_bar_status);
+        mSpinner.setVisibility(View.GONE);
+
+        mStatusMode = (TextView)findViewById(R.id.text_status_mode);
 
         Switch switch1 = (Switch) findViewById(R.id.switch1);
         switch1.setChecked(mSwitchState1);
