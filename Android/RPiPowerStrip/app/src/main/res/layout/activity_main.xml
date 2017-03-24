@@ -7,8 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/activity_horizontal_margin"
-        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -21,12 +21,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
-                android:paddingStart="26dp"
-                android:paddingEnd="26dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
                 android:paddingTop="26dp"
                 android:paddingBottom="26dp"
-                android:text="Status: "
-                android:textSize="25sp"
+                android:text="Status: NOT CONNECTED"
+                android:textSize="20sp"
                 android:textColor="@color/colorDarkThemeText" />
 
             <ProgressBar
@@ -36,20 +36,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true" />
-
-            <TextView
-                android:id="@+id/text_status_mode"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:paddingStart="26dp"
-                android:paddingEnd="26dp"
-                android:paddingTop="26dp"
-                android:paddingBottom="26dp"
-                android:text="OK"
-                android:textSize="25sp"
-                android:textColor="@color/colorDarkThemeText"
-                android:layout_alignParentBottom="true" />
 
         </RelativeLayout>
 

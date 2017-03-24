@@ -18,7 +18,8 @@
         android:backgroundTint="@color/colorDarkThemeAccent"
         android:imeOptions="actionDone"
         android:maxLength="16"
-        android:textColor="@color/colorDarkThemeText"/>
+        android:textColor="@color/colorDarkThemeText"
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/edit_user"
@@ -29,7 +30,8 @@
         android:backgroundTint="@color/colorDarkThemeAccent"
         android:imeOptions="actionDone"
         android:maxLength="16"
-        android:textColor="@color/colorDarkThemeText"/>
+        android:textColor="@color/colorDarkThemeText"
+        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/edit_pass"
@@ -40,7 +42,8 @@
         android:hint="Enter password"
         android:imeOptions="actionDone"
         android:maxLength="16"
-        android:textColor="@color/colorDarkThemeText"/>
+        android:textColor="@color/colorDarkThemeText"
+        android:textSize="20sp"/>
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
