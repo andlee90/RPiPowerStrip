@@ -27,7 +27,8 @@
                 android:paddingBottom="26dp"
                 android:text="Status: NOT CONNECTED"
                 android:textSize="20sp"
-                android:textColor="@color/colorDarkThemeText" />
+                android:textColor="@color/colorDarkThemeText"
+                android:freezesText="true"/>
 
             <ProgressBar
                 android:id="@+id/progress_bar_status"
