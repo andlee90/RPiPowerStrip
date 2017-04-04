@@ -6,4 +6,8 @@
     <string name="status_connected">Status: CONNECTED</string>
     <string name="status_not_connected">Status: NOT CONNECTED</string>
 
+    <!-- Commands -->
+    <string name="command_relay_control">cd RelayControl/ &amp;&amp; ls</string>
+
+
 </resources>

@@ -50,7 +50,7 @@ class SwitchCheckChangeListener implements OnCheckedChangeListener
             editor.putBoolean(prefName, true);
             editor.apply();
 
-            String command = "cd RelayControl/ && python relay_controller_android.py " + mChannel + " 0";
+            String command = "cd RelayControl/ && python relay_controller.py " + mChannel + " 0";
             mConnectionManager = new ConnectionManager(host, user, pass, command, new ConnectionManager.AsyncResponse(){
 
                 @Override
@@ -78,7 +78,7 @@ class SwitchCheckChangeListener implements OnCheckedChangeListener
             editor.putBoolean(prefName, false);
             editor.apply();
 
-            String command = "cd RelayControl/ && python relay_controller_android.py " + mChannel + " 1";
+            String command = "cd RelayControl/ && python relay_controller.py " + mChannel + " 1";
             mConnectionManager = new ConnectionManager(host, user, pass, command, new ConnectionManager.AsyncResponse() {
 
                 @Override

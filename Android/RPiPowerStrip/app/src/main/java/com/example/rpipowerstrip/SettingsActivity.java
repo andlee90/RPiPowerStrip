@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 import static com.example.rpipowerstrip.MainActivity.PREFERENCES;
 import static com.example.rpipowerstrip.R.id.button_accept;
 import static com.example.rpipowerstrip.R.id.button_test;
@@ -110,7 +112,10 @@ public class SettingsActivity extends AppCompatActivity implements TextView.OnEd
         {
             if (mHost != null && mUser != null && mPass != null)
             {
-                String command = "cd RelayControl/ && ls";
+                String[] colors = {"r", "g", "b", "y", "m", "c", "w"};
+                int randomNum = ThreadLocalRandom.current().nextInt(0, 6 + 1);
+                String command = "cd RGBControl/ && python rgb_led_mode_controller.py " + colors[randomNum];
+
                 mConnectionManager = new ConnectionManager(mHost, mUser, mPass, command, new ConnectionManager.AsyncResponse(){
 
                     @Override
