@@ -8,17 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Menu item appearance. -->
     <style name="MenuItemTextAppearance">
-        <item name="actionMenuTextColor">@color/colorDarkThemeText</item>
-        <item name="android:actionMenuTextColor">@color/colorDarkThemeText</item>
+        <item name="android:textColor">@color/colorDarkThemeText</item>
     </style>
 
+    <!-- DEFAULT Base application dark theme. -->
     <style name="AppThemeDark" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorDarkThemePrimary</item>
         <item name="colorPrimaryDark">@color/colorDarkThemePrimaryDark</item>
         <item name="colorAccent">@color/colorDarkThemeAccent</item>
         <item name="android:text">@color/colorDarkThemeText</item>
         <item name="android:backgroundTint">@color/colorDarkThemeBackground</item>
-        <item name="actionMenuTextAppearance">@style/MenuItemTextAppearance</item>
+        <item name="android:itemTextAppearance">@style/MenuItemTextAppearance</item>
     </style>
 </resources>
