@@ -19,6 +19,7 @@
         android:imeOptions="actionDone"
         android:maxLength="16"
         android:textColor="@color/colorDarkThemeText"
+        android:textColorHint="@color/colorDarkThemeText"
         android:textSize="20sp"/>
 
     <EditText
@@ -31,6 +32,7 @@
         android:imeOptions="actionDone"
         android:maxLength="16"
         android:textColor="@color/colorDarkThemeText"
+        android:textColorHint="@color/colorDarkThemeText"
         android:textSize="20sp"/>
 
     <EditText
@@ -43,6 +45,7 @@
         android:imeOptions="actionDone"
         android:maxLength="16"
         android:textColor="@color/colorDarkThemeText"
+        android:textColorHint="@color/colorDarkThemeText"
         android:textSize="20sp"/>
 
     <LinearLayout
